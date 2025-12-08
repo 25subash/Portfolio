@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume - Subash S.</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Custom Cursor -->
+  <div class="cursor"></div>
+
+  <!-- Watermark -->
+  <div class="bg-static-title vertical-watermark resume-watermark" id="watermark">Resume.</div>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <nav class="nav">
+      <a href="index.html" class="logo">Home</a>
+      <ul class="nav-links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Resume Section -->
+  <section class="hero reveal page-wrapper">
+    <div class="hero-content">
+      <h2 class="page-title resume-bounce">
+        <span class="key">R</span>
+        <span class="key">e</span>
+        <span class="key">s</span>
+        <span class="key">u</span>
+        <span class="key">m</span>
+        <span class="key">e</span>
+        <span class="key">.</span>
+      </h2>
+      <p class="page-description">
+        Download my resume or view it below.
+      </p>
+      
+      <div style="display: flex; gap: 16px; margin-bottom: 20px;">
+        <a href="Subash_Resume.pdf" download class="resume-download-btn">
+          Download Resume
+        </a>
+        
+        <button onclick="toggleResume()" class="resume-download-btn" id="toggleBtn">
+          View Resume
+        </button>
+      </div>
+
+      <iframe
+        id="resumeIframe"
+        src="Subash_Resume.pdf"
+        style="display: none; margin-top: 20px; width: 100%; height: 150vh; border: none; border-radius: 12px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);"
+      ></iframe>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+  <script>
+    let showResume = false;
+
+    function toggleResume() {
+      showResume = !showResume;
+      const iframe = document.getElementById('resumeIframe');
+      const btn = document.getElementById('toggleBtn');
+      
+      if (showResume) {
+        iframe.style.display = 'block';
+        btn.textContent = 'Hide Resume';
+      } else {
+        iframe.style.display = 'none';
+        btn.textContent = 'View Resume';
+      }
+    }
+  </script>
+</body>
+</html>

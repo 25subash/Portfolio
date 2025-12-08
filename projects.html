@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects - Subash S.</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Custom Cursor -->
+  <div class="cursor"></div>
+
+  <!-- Watermark -->
+  <div class="bg-static-title vertical-watermark projects-watermark" id="watermark">Projects.</div>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <nav class="nav">
+      <a href="index.html" class="logo">Home</a>
+      <ul class="nav-links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Projects Section -->
+  <section class="hero reveal page-wrapper">
+    <div class="hero-content">
+      <h2 class="page-title contact-title">Projects.</h2>
+      
+      <div class="projects-grid" id="projectsGrid">
+        <!-- Projects will be rendered by JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Side Panel (will be shown/hidden with JavaScript) -->
+  <div class="panel-overlay" id="panelOverlay" style="display: none;" onclick="closePanel()"></div>
+  <div class="project-panel" id="projectPanel">
+    <button class="close-panel" onclick="closePanel()">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M18 6L6 18M6 6l12 12"/>
+      </svg>
+    </button>
+    
+    <div class="panel-content" id="panelContent">
+      <!-- Panel content will be rendered by JavaScript -->
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="projects.js"></script>
+</body>
+</html>
